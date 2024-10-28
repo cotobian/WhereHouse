@@ -157,7 +157,7 @@ header {
   display: flex; /* Sử dụng flexbox để căn giữa nội dung */
   justify-content: center; /* Căn giữa theo chiều ngang */
   align-items: center; /* Căn giữa theo chiều dọc */
-  color: #c0c0c0; /* Màu chữ trắng */
+  color: #ffffff; /* Màu chữ trắng */
   font-size: 32px; /* Kích thước chữ lớn hơn */
   font-weight: bold; /* Để chữ đậm */
   font-style: italic; /* Chữ nghiêng */
