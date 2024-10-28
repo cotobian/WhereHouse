@@ -3,36 +3,31 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Arial, sans-serif;
+  color: #800020; /* Màu chữ Bordeaux */
 }
 
 body {
   background-color: #f4f4f4;
-  color: #800020; /* Màu chữ Bordeaux */
-  font-family: "Montserrat", sans-serif; /* Sử dụng font Montserrat */
-}
 
-.container-fluid {
-  max-width: 90%;
-  margin: 0 auto;
-  background-color: white; /* Màu nền trắng cho các phần tử trong container */
+  font-family: "Montserrat", sans-serif;
 }
 
 header {
-  background: url("background.jpg") no-repeat center center/cover;
   color: white;
-  padding: 60px 20px;
-  text-align: center;
   position: relative;
 }
 
+/* CSS cho thanh toolbar */
+/* CSS cho header */
 .sticky-header {
   position: sticky;
-  top: 0;
+  top: 0; /* Đặt lại top về 0 để làm cho header luôn ở trên cùng */
   width: 100%;
   background-color: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   z-index: 1000;
   padding: 10px 0;
+  margin-bottom: 0;
 }
 
 .sticky-header nav {
@@ -48,45 +43,37 @@ header {
 .logo-container {
   display: flex;
   align-items: center;
-  margin-right: auto;
 }
 
 .logo-image {
-  width: 80px; /* Tăng kích thước logo */
-  height: 80px; /* Đảm bảo chiều cao phù hợp */
-  margin-right: 15px; /* Khoảng cách giữa logo và tên công ty */
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
 }
 
 .logo-text {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #800020; /* Màu chữ Bordeaux */
-  line-height: 1.2;
-  text-align: left; /* Căn trái nội dung */
-}
-
-.sticky-header ul {
-  list-style: none;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 10px;
 }
 
-.sticky-header ul li {
-  margin: 0 20px; /* Khoảng cách giữa các mục menu */
-}
-
-.sticky-header ul li a {
-  text-decoration: none;
-  color: #800020; /* Màu chữ Bordeaux */
-  font-size: 1rem;
+.company-name {
+  font-size: 1.5rem; /* Kích thước chữ của tên công ty */
   font-weight: bold;
-  transition: color 0.3s;
+  color: #800020;
 }
 
-/* Định dạng ô tìm kiếm */
+.company-tagline {
+  font-size: 1.25rem; /* Tăng kích thước chữ của tagline */
+  color: #daa520; /* Màu vàng đậm để nổi bật */
+  font-style: italic;
+  font-weight: 500;
+  margin-left: 10px; /* Khoảng cách giữa tên công ty và tagline */
+}
+
 .search-bar {
-  background-color: #800020; /* Màu nền Bordeaux */
-  color: white; /* Màu chữ trắng */
+  background-color: #800020;
+  color: white;
   padding: 8px 15px;
   border: none;
   border-radius: 5px;
@@ -97,150 +84,83 @@ header {
 }
 
 .search-bar::placeholder {
-  color: #f4f4f4; /* Màu chữ placeholder */
+  color: #f4f4f4;
 }
 
 .search-bar:focus {
-  width: 200px; /* Mở rộng khi có focus */
-  background-color: #660016; /* Màu nền khi focus */
+  width: 200px;
+  background-color: #660016;
 }
 
-#about,
-#services,
-#contact {
-  max-width: 90%; /* Đặt chiều rộng tối đa là 90% */
-  margin: 0 auto; /* Căn giữa section */
-  padding: 60px 20px;
-  text-align: left; /* Căn trái nội dung */
-  color: #800020; /* Màu chữ Bordeaux */
-}
-
-#about {
-  padding: 60px 20px;
-  text-align: center;
-}
-
-h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-  text-align: left; /* Căn trái nội dung */
-  font-weight: bold; /* Đặt font chữ thành đậm */
-  color: #800020; /* Màu chữ Bordeaux */
-}
-
-.services-container {
+.toolbar {
+  position: sticky;
+  top: 100px;
+  background-color: #800020;
+  width: 100%;
+  z-index: 999;
+  padding: 0;
   display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.service-box {
-  background-color: white;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 300px;
-}
-
-.service-box h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-  color: #800020; /* Màu chữ Bordeaux */
-}
-
-footer {
-  background-color: #333;
-  color: white;
-  text-align: center;
-  padding: 20px;
-}
-
-#home {
-  position: relative;
-  background: url("content/warehouse.png") no-repeat center center;
-  background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ khu vực */
-  width: 100%; /* Đảm bảo chiều rộng là 100% */
-  height: 40vh; /* Chiều cao có thể giữ như trước */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  text-align: center;
-  overflow: hidden;
+}
+
+.toolbar ul {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px 0;
+  flex-grow: 1;
+}
+
+.toolbar-image {
+  width: 50px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.toolbar ul li {
+  margin: 0 15px;
+}
+
+.toolbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.toolbar ul li a:hover {
+  color: #ffd700; /* Màu vàng khi hover */
+}
+
+/* CSS cho hình ảnh trong carousel */
+.carousel-inner img {
+  height: 400px; /* Chiều cao cố định cho hình ảnh */
+  width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+  object-fit: cover; /* Giữ tỷ lệ hình ảnh */
+}
+
+/* CSS cho overlay */
+.carousel-item {
+  position: relative; /* Thiết lập vị trí tương đối cho các item trong carousel */
 }
 
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ tối */
-  z-index: 1;
-}
-
-#home h2 {
-  position: relative;
-  z-index: 2;
-  font-size: 4rem; /* Kích thước lớn cho tiêu đề */
-  font-weight: bold; /* Làm cho chữ in đậm */
-  color: #c0392b; /* Màu sắc mới (màu đỏ tươi) */
-  margin: 0;
-  text-align: center; /* Căn trái */
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Bóng chữ */
-  width: 100%; /* Để căn trái hoạt động tốt hơn */
-  font-style: italic; /* Làm chữ nghiêng */
-}
-
-#home p {
-  position: relative;
-  z-index: 2;
-  font-size: 2rem; /* Kích thước lớn cho đoạn văn */
-  font-weight: 400;
-  color: #fefbd8; /* Màu trắng cho đoạn văn */
-  margin-top: 10px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Bóng chữ cho đoạn văn */
-  font-style: italic; /* Làm chữ đoạn văn nghiêng */
-}
-
-.narrow-text {
-  display: flex; /* Bật chế độ Flexbox */
-  flex-direction: column; /* Sắp xếp theo chiều dọc */
-  justify-content: center; /* Căn giữa theo chiều dọc */
-  align-items: center; /* Căn giữa theo chiều ngang */
-  text-align: center; /* Căn giữa văn bản */
-  max-width: 600px; /* Thay đổi kích thước tối đa của div */
-  margin: 0 auto; /* Căn giữa div trong trang */
-  height: 100%; /* Đảm bảo chiều cao đủ để căn giữa */
-}
-
-.bold-text {
-  font-weight: bold; /* Đặt chữ đậm */
-  font-size: 2.3rem; /* Kích thước chữ cho đoạn đầu */
-  color: #800020; /* Màu chữ Bordeaux */
-}
-
-.black-text {
-  font-weight: normal; /* Đặt chữ bình thường cho đoạn dưới */
-  color: black; /* Màu đen cho đoạn dưới */
-  font-size: 1.5rem; /* Kích thước chữ cho đoạn dưới */
-  display: block; /* Đảm bảo đoạn này trên một dòng mới */
-  margin-top: 20px; /* Khoảng cách giữa hai đoạn văn */
-}
-
-.image {
-  flex: 1; /* Cho phần hình ảnh chiếm 1 phần */
-}
-
-.about-image {
-  width: 100%; /* Đảm bảo ảnh chiếm 100% chiều rộng của div */
-  height: auto; /* Giữ tỷ lệ khung hình cho ảnh */
-  border-radius: 8px; /* Tạo bo góc cho ảnh */
-}
-
-.service-title {
-  font-weight: bold; /* Đặt font chữ thành đậm */
-  display: block; /* Đảm bảo mỗi span nằm trên một dòng riêng */
-  margin-bottom: 10px; /* Khoảng cách giữa các span */
+  position: absolute; /* Đặt overlay tuyệt đối */
+  top: 0; /* Đặt vị trí từ trên cùng */
+  left: 0; /* Đặt vị trí từ bên trái */
+  width: 100%; /* Chiếm toàn bộ chiều rộng */
+  height: 100%; /* Chiếm toàn bộ chiều cao */
+  background-color: rgba(0, 0, 0, 0.5); /* Màu nền đen với độ trong suốt */
+  display: flex; /* Sử dụng flexbox để căn giữa nội dung */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
+  color: #ffffff; /* Màu chữ trắng */
+  font-size: 32px; /* Kích thước chữ lớn hơn */
+  font-weight: bold; /* Để chữ đậm */
+  font-style: italic; /* Chữ nghiêng */
+  text-align: center; /* Căn giữa chữ */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Hiệu ứng bóng đổ cho chữ */
 }

@@ -1,0 +1,131 @@
+.section-header {
+  font-size: 2.5rem; /* Tăng kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+  color: #800020; /* Màu chữ Bordeaux (hoặc màu khác bạn thích) */
+  text-align: left; /* Căn trái tiêu đề */
+  margin-bottom: 30px; /* Khoảng cách dưới tiêu đề */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Hiệu ứng bóng đổ cho chữ */
+  padding-left: 20px; /* Khoảng cách bên trái để lệch vào */
+}
+
+#news,
+#services,
+#contactus {
+  margin: 20px 0; /* Khoảng cách trên và dưới */
+  padding: 0 10px 0 10px;
+}
+
+.section-header {
+  font-size: 2.4rem; /* Tăng kích thước chữ */
+  font-weight: bold; /* Làm cho chữ đậm hơn */
+  text-align: center; /* Căn trái tiêu đề */
+  margin-bottom: 20px; /* Khoảng cách dưới tiêu đề */
+  color: #800020; /* Màu chữ Bordeaux (có thể điều chỉnh theo ý muốn) */
+  font-style: italic;
+}
+
+.news-img {
+  height: 200px; /* Chiều cao cho hình ảnh */
+  background-size: cover; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng và cao */
+  background-position: center; /* Căn giữa hình ảnh */
+  margin-bottom: 10px; /* Khoảng cách dưới hình ảnh */
+  transition: transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+  border: 0.5px solid #c0c0c0; /* Viền với màu Bordeaux */
+  border-radius: 5px; /* Bo tròn các góc với bán kính 10px */
+  overflow: hidden; /* Ẩn phần hình ảnh vượt ra ngoài khung */
+}
+
+.news-img:hover {
+  transform: scale(1.05); /* Thu nhỏ hình ảnh khi hover */
+}
+
+.news-header {
+  font-size: 1.2rem; /* Kích thước chữ */
+  font-weight: bold; /* Chữ đậm */
+  color: #800020; /* Màu chữ Bordeaux */
+  margin-bottom: 10px; /* Khoảng cách dưới tiêu đề */
+  transition: color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.news-header:hover {
+  color: #ffd700; /* Màu vàng khi hover */
+  transform: scale(1.05); /* Phóng to một chút khi hover */
+}
+
+.news-headline {
+  font-size: 0.9rem; /* Kích thước chữ cho mô tả */
+  color: #666; /* Màu chữ xám cho mô tả */
+}
+
+.services-img {
+  height: 200px; /* Chiều cao cho hình ảnh */
+  background-size: cover; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng và cao */
+  background-position: center; /* Căn giữa hình ảnh */
+  border: 0.5px solid #c0c0c0; /* Viền với màu Bordeaux */
+  border-radius: 5px; /* Bo tròn các góc với bán kính 10px */
+  margin-bottom: 10px; /* Khoảng cách dưới hình ảnh */
+  transition: transform 0.3s ease; /* Hiệu ứng chuyển đổi */
+}
+
+/* Hiệu ứng zoom khi hover */
+.services-img:hover {
+  transform: scale(1.05); /* Phóng to 5% */
+}
+
+/* Tiêu đề dịch vụ */
+.services-header {
+  font-size: 1.25rem; /* Kích thước chữ */
+  font-weight: bold; /* Đậm */
+  color: #800020; /* Màu chữ Bordeaux */
+  text-align: center; /* Canh giữa */
+  margin-top: 5px; /* Khoảng cách trên tiêu đề dịch vụ */
+}
+
+.services-header:hover {
+  color: #ffd700; /* Màu vàng khi hover */
+  transform: scale(1.05); /* Phóng to một chút khi hover */
+}
+
+.section-underline {
+  height: 2px; /* Độ dày của đường kẻ */
+  width: 60%; /* Chiều rộng */
+  background-color: #800020; /* Màu sắc */
+  margin: 10px auto; /* Căn giữa bằng cách sử dụng margin auto */
+}
+
+.partner-img {
+  width: 30% !important;
+  height: 150px !important;
+  object-fit: contain;
+  border: 0.5px solid #c0c0c0; /* Viền với màu Bordeaux */
+  border-radius: 5px; /* Bo tròn các góc nếu muốn */
+}
+
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-inner {
+  overflow: hidden;
+}
+
+#contactus {
+  background-color: #800020; /* Nền màu Bordeaux */
+  color: white; /* Màu chữ trắng */
+  padding: 20px; /* Khoảng cách quanh nội dung */
+  border-radius: 8px 8px 0 0; /* Bo tròn 2 góc trên trái và phải */
+}
+
+#contactus .section-header {
+  text-align: center; /* Căn giữa tiêu đề */
+  font-size: 24px; /* Kích thước chữ cho tiêu đề */
+}
+
+#contactus p {
+  text-align: left; /* Căn trái nội dung */
+  font-size: 16px; /* Kích thước chữ cho nội dung */
+  line-height: 1.6; /* Khoảng cách giữa các dòng */
+  color: white; /* Màu chữ trắng */
+}
