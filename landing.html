@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wherehouse - Unlocking Space, Empowering Businesses</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      /* CSS cho sticky header */
+      .sticky-header {
+        display: flex; /* Sử dụng Flexbox */
+        justify-content: space-between; /* Căn giữa theo chiều ngang */
+        align-items: center; /* Căn giữa theo chiều dọc */
+        padding: 10px 20px; /* Padding cho header */
+        background-color: #fff; /* Màu nền cho header */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Bóng cho header */
+        position: sticky; /* Sticky header */
+        top: 0; /* Vị trí top */
+        z-index: 1000; /* Đảm bảo header luôn ở trên */
+      }
+
+      .logo-container {
+        display: flex; /* Sử dụng Flexbox để căn giữa logo và tên */
+        align-items: center; /* Căn giữa theo chiều dọc */
+      }
+
+      .logo-text {
+        margin-left: 10px; /* Khoảng cách giữa logo và tên công ty */
+        display: flex; /* Sử dụng Flexbox cho logo text */
+        flex-direction: column; /* Xếp theo cột */
+        justify-content: center; /* Căn giữa theo chiều dọc */
+        align-items: center; /* Căn giữa theo chiều ngang */
+        text-align: center; /* Căn giữa chữ */
+      }
+
+      #search-container {
+        display: flex; /* Sử dụng Flexbox cho search bar */
+        align-items: center; /* Căn giữa theo chiều dọc */
+      }
+
+      .toolbar {
+        background-color: #800020; /* Màu nền Bordeaux */
+        padding: 10px 0; /* Khoảng cách trên và dưới */
+        text-align: center; /* Căn giữa nội dung */
+      }
+
+      .toolbar ul {
+        list-style: none; /* Xóa dấu chấm đầu dòng */
+        padding: 0; /* Xóa khoảng cách padding */
+        margin: 0; /* Xóa khoảng cách margin */
+        display: flex; /* Hiển thị theo hàng */
+        justify-content: center; /* Căn giữa các mục */
+      }
+
+      .toolbar ul li {
+        margin: 0 30px; /* Khoảng cách giữa các mục */
+        position: relative; /* Để định vị menu dropdown */
+      }
+
+      .toolbar ul li a {
+        color: white; /* Màu chữ trắng */
+        text-decoration: none; /* Bỏ gạch chân */
+        font-weight: bold; /* Chữ đậm */
+        transition: color 0.3s; /* Hiệu ứng chuyển màu khi hover */
+      }
+
+      .toolbar ul li a:hover {
+        color: #ffcc00; /* Màu chữ khi hover */
+      }
+
+      /* Dropdown styles */
+      .dropdown {
+        display: none; /* Ẩn menu dropdown */
+        position: absolute; /* Định vị menu dropdown */
+        background-color: #800020; /* Màu nền giống như thanh công cụ */
+        min-width: 200px; /* Độ rộng tối thiểu của menu dropdown, tăng lên 200px */
+        z-index: 1; /* Để đảm bảo menu hiện lên trên các phần tử khác */
+        border-radius: 5px; /* Bo góc cho menu dropdown */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng cho menu */
+      }
+
+      .dropdown a {
+        display: block; /* Hiển thị dưới dạng khối để dễ dàng click */
+        color: white; /* Màu chữ */
+        padding: 10px; /* Khoảng cách trong menu */
+        text-decoration: none; /* Bỏ gạch chân */
+        text-align: left; /* Căn trái chữ trong dropdown */
+      }
+
+      .dropdown a:hover {
+        background-color: #ffcc00; /* Màu nền khi hover trong dropdown */
+        color: #800020; /* Màu chữ khi hover */
+      }
+
+      /* Hiện dropdown khi hover */
+      .toolbar ul li:hover .dropdown {
+        display: block; /* Hiện menu dropdown */
+      }
+    </style>
+  </head>
+  <body>
+    <header class="sticky-header">
+      <nav>
+        <div class="logo-container">
+          <img src="content/logo.png" alt="Logo" class="logo-image" />
+          <div class="logo-text">
+            WHEREHOUSE<br />
+            TECHNOLOGIES .INC
+          </div>
+        </div>
+        <div id="search-container" style="margin-top: 10px">
+          <input type="text" class="search-bar" placeholder="Tìm kiếm..." />
+        </div>
+      </nav>
+    </header>
+
+    <!-- Thanh điều hướng -->
+    <nav class="toolbar">
+      <ul>
+        <li><a href="#home">HOME</a></li>
+        <li>
+          <a href="#services">SERVICE</a>
+          <div class="dropdown">
+            <a href="#service1">Dịch vụ 1</a>
+            <a href="#service2">Dịch vụ 2</a>
+            <a href="#service3">Dịch vụ 3</a>
+          </div>
+        </li>
+        <li>
+          <a href="#about">ABOUT US</a>
+          <div class="dropdown">
+            <a href="#about1">Thông tin 1</a>
+            <a href="#about2">Thông tin 2</a>
+            <a href="#about3">Thông tin 3</a>
+          </div>
+        </li>
+        <li><a href="#news">NEWS</a></li>
+        <li><a href="#recruit">RECRUIT</a></li>
+        <li><a href="#contact">CONTACT US</a></li>
+      </ul>
+    </nav>
+
+    <section id="home" class="position-relative">
+      <!-- Nội dung home đã được loại bỏ -->
+    </section>
+
+    <section id="services" class="py-5 text-center">
+      <h2 style="font-size: 3rem">OUR SERVICE</h2>
+      <div class="services-container">
+        <div class="service-box">
+          <h3>Lưu trữ an toàn</h3>
+          <p>
+            Kho bãi hiện đại và an toàn đảm bảo hàng hóa của bạn được bảo vệ tối
+            ưu.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>Quản lý thông minh</h3>
+          <p>
+            Hệ thống quản lý thông minh giúp bạn dễ dàng theo dõi và kiểm soát
+            hàng hóa.
+          </p>
+        </div>
+        <div class="service-box">
+          <h3>Vận chuyển nhanh chóng</h3>
+          <p>
+            Dịch vụ vận chuyển linh hoạt và nhanh chóng, đáp ứng mọi nhu cầu của
+            doanh nghiệp.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="container-fluid py-5">
+      <h2 class="mb-4" style="font-size: 3rem">ABOUT US</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="narrow-text">
+            <span class="bold-text"
+              >REDEFINING THE LANDSCAPE OF COMMERCIAL REAL ESTATE</span
+            ><br />
+            <span class="black-text">
+              By bridging the gap between businesses seeking affordable
+              warehouse space and property owners with underutilized assets.
+            </span>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="image">
+            <img src="content/about.png" alt="About Us" class="about-image" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5 text-center">
+      <h2 style="font-size: 3rem">CONTACT US</h2>
+      <p>
+        Để tìm hiểu thêm về các dịch vụ của chúng tôi, vui lòng liên hệ qua biểu
+        mẫu bên dưới.
+      </p>
+      <form action="#">
+        <input type="text" placeholder="Tên của bạn" required />
+        <input type="email" placeholder="Email của bạn" required />
+        <textarea placeholder="Nội dung liên hệ" required></textarea>
+        <button type="submit">Gửi liên hệ</button>
+      </form>
+    </section>
+
+    <
+  </body>
+</html>

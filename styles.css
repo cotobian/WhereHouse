@@ -1,0 +1,246 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #800020; /* Màu chữ Bordeaux */
+  font-family: "Montserrat", sans-serif; /* Sử dụng font Montserrat */
+}
+
+.container-fluid {
+  max-width: 90%;
+  margin: 0 auto;
+  background-color: white; /* Màu nền trắng cho các phần tử trong container */
+}
+
+header {
+  background: url("background.jpg") no-repeat center center/cover;
+  color: white;
+  padding: 60px 20px;
+  text-align: center;
+  position: relative;
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+}
+
+.sticky-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+}
+
+.logo-image {
+  width: 80px; /* Tăng kích thước logo */
+  height: 80px; /* Đảm bảo chiều cao phù hợp */
+  margin-right: 15px; /* Khoảng cách giữa logo và tên công ty */
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #800020; /* Màu chữ Bordeaux */
+  line-height: 1.2;
+  text-align: left; /* Căn trái nội dung */
+}
+
+.sticky-header ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.sticky-header ul li {
+  margin: 0 20px; /* Khoảng cách giữa các mục menu */
+}
+
+.sticky-header ul li a {
+  text-decoration: none;
+  color: #800020; /* Màu chữ Bordeaux */
+  font-size: 1rem;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+/* Định dạng ô tìm kiếm */
+.search-bar {
+  background-color: #800020; /* Màu nền Bordeaux */
+  color: white; /* Màu chữ trắng */
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+  width: 150px;
+  transition: width 0.3s;
+}
+
+.search-bar::placeholder {
+  color: #f4f4f4; /* Màu chữ placeholder */
+}
+
+.search-bar:focus {
+  width: 200px; /* Mở rộng khi có focus */
+  background-color: #660016; /* Màu nền khi focus */
+}
+
+#about,
+#services,
+#contact {
+  max-width: 90%; /* Đặt chiều rộng tối đa là 90% */
+  margin: 0 auto; /* Căn giữa section */
+  padding: 60px 20px;
+  text-align: left; /* Căn trái nội dung */
+  color: #800020; /* Màu chữ Bordeaux */
+}
+
+#about {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  text-align: left; /* Căn trái nội dung */
+  font-weight: bold; /* Đặt font chữ thành đậm */
+  color: #800020; /* Màu chữ Bordeaux */
+}
+
+.services-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-box {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 300px;
+}
+
+.service-box h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #800020; /* Màu chữ Bordeaux */
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+#home {
+  position: relative;
+  background: url("content/warehouse.png") no-repeat center center;
+  background-size: cover; /* Đảm bảo ảnh bao phủ toàn bộ khu vực */
+  width: 100%; /* Đảm bảo chiều rộng là 100% */
+  height: 40vh; /* Chiều cao có thể giữ như trước */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Lớp phủ tối */
+  z-index: 1;
+}
+
+#home h2 {
+  position: relative;
+  z-index: 2;
+  font-size: 4rem; /* Kích thước lớn cho tiêu đề */
+  font-weight: bold; /* Làm cho chữ in đậm */
+  color: #c0392b; /* Màu sắc mới (màu đỏ tươi) */
+  margin: 0;
+  text-align: center; /* Căn trái */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Bóng chữ */
+  width: 100%; /* Để căn trái hoạt động tốt hơn */
+  font-style: italic; /* Làm chữ nghiêng */
+}
+
+#home p {
+  position: relative;
+  z-index: 2;
+  font-size: 2rem; /* Kích thước lớn cho đoạn văn */
+  font-weight: 400;
+  color: #fefbd8; /* Màu trắng cho đoạn văn */
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Bóng chữ cho đoạn văn */
+  font-style: italic; /* Làm chữ đoạn văn nghiêng */
+}
+
+.narrow-text {
+  display: flex; /* Bật chế độ Flexbox */
+  flex-direction: column; /* Sắp xếp theo chiều dọc */
+  justify-content: center; /* Căn giữa theo chiều dọc */
+  align-items: center; /* Căn giữa theo chiều ngang */
+  text-align: center; /* Căn giữa văn bản */
+  max-width: 600px; /* Thay đổi kích thước tối đa của div */
+  margin: 0 auto; /* Căn giữa div trong trang */
+  height: 100%; /* Đảm bảo chiều cao đủ để căn giữa */
+}
+
+.bold-text {
+  font-weight: bold; /* Đặt chữ đậm */
+  font-size: 2.3rem; /* Kích thước chữ cho đoạn đầu */
+  color: #800020; /* Màu chữ Bordeaux */
+}
+
+.black-text {
+  font-weight: normal; /* Đặt chữ bình thường cho đoạn dưới */
+  color: black; /* Màu đen cho đoạn dưới */
+  font-size: 1.5rem; /* Kích thước chữ cho đoạn dưới */
+  display: block; /* Đảm bảo đoạn này trên một dòng mới */
+  margin-top: 20px; /* Khoảng cách giữa hai đoạn văn */
+}
+
+.image {
+  flex: 1; /* Cho phần hình ảnh chiếm 1 phần */
+}
+
+.about-image {
+  width: 100%; /* Đảm bảo ảnh chiếm 100% chiều rộng của div */
+  height: auto; /* Giữ tỷ lệ khung hình cho ảnh */
+  border-radius: 8px; /* Tạo bo góc cho ảnh */
+}
+
+.service-title {
+  font-weight: bold; /* Đặt font chữ thành đậm */
+  display: block; /* Đảm bảo mỗi span nằm trên một dòng riêng */
+  margin-bottom: 10px; /* Khoảng cách giữa các span */
+}
