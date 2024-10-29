@@ -11,6 +11,51 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
   </head>
+  <style>
+    .tab-style {
+      color: #800020; /* Màu bordeaux */
+      font-style: italic; /* Chữ nghiêng */
+    }
+
+    .tab-content {
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      margin-top: 15px;
+    }
+
+    .service-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .service-header {
+      font-size: 1.5em;
+      color: #0056b3;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .service-detail {
+      font-size: 1em;
+      line-height: 1.8;
+      margin-bottom: 15px;
+    }
+
+    /* Định dạng danh sách */
+    .service-detail ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .service-detail li {
+      margin: 10px 0;
+    }
+  </style>
   <body>
     <!-- Header cố định -->
     <header class="sticky-header">
@@ -54,31 +99,194 @@
       <!-- Tạo khoảng cách giữa nav và section -->
       <section id="services">
         <h2 class="section-header">SERVICES</h2>
-        <div class="row">
-          <div class="col-md-4 col-xl-4 col-12">
-            <div
-              class="services-img"
-              style="background-image: url('../content/services1.jpg')"
-            ></div>
-            <div class="services-header">CFS Warehouse</div>
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="serviceTabs" role="tablist">
+          <li class="nav-item">
+            <a
+              class="nav-link active tab-style"
+              id="service1-tab"
+              data-toggle="tab"
+              href="#service1"
+              role="tab"
+              aria-controls="service1"
+              aria-selected="true"
+              >CFS Warehouse</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link tab-style"
+              id="service2-tab"
+              data-toggle="tab"
+              href="#service2"
+              role="tab"
+              aria-controls="service2"
+              aria-selected="false"
+              >Customs Declaration</a
+            >
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link tab-style"
+              id="service3-tab"
+              data-toggle="tab"
+              href="#service3"
+              role="tab"
+              aria-controls="service3"
+              aria-selected="false"
+              >Trucking</a
+            >
+          </li>
+        </ul>
+
+        <!-- Tab content -->
+        <div class="tab-content" id="serviceTabsContent">
+          <div
+            class="tab-pane fade show active"
+            id="service1"
+            role="tabpanel"
+            aria-labelledby="service1-tab"
+          >
+            <div class="service-img">
+              <img
+                src="../content/services1.jpg"
+                alt="Kho CFS"
+                style="width: 100%; height: auto"
+              />
+            </div>
+            <div class="service-header">CFS Warehouse</div>
+            <div class="service-detail">
+              Our CFS (Container Freight Station) service provides an optimal
+              solution for cargo management, helping customers save time and
+              costs during transportation and storage processes. At Wherehouse
+              Technologies Co., Ltd., we understand that each shipment has its
+              own value and specific requirements, so our service is designed to
+              flexibly meet the unique needs of each customer. Key features of
+              our CFS warehousing service include:
+              <ul>
+                <li>
+                  Spacious Storage Capacity: With modern, expansive facilities,
+                  we are equipped to receive and manage goods on a large scale,
+                  ensuring that cargo is stored securely and is easily
+                  accessible.
+                </li>
+                <li>
+                  Smart Goods Management: Our warehouse management system
+                  utilizes advanced technology, allowing for efficient tracking
+                  and control of goods, minimizing the risk of loss or damage.
+                </li>
+                <li>
+                  Professional Packing Service: Our experienced team will assist
+                  in packing and preparing goods before shipment, ensuring that
+                  cargo is well-protected throughout the transportation process.
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="col-md-4 col-xl-4 col-12">
-            <div
-              class="services-img"
-              style="background-image: url('../content/services2.jpg')"
-            ></div>
-            <div class="services-header">Custom Declaration</div>
+          <div
+            class="tab-pane fade"
+            id="service2"
+            role="tabpanel"
+            aria-labelledby="service2-tab"
+          >
+            <div class="service-img">
+              <img
+                src="../content/services2.jpg"
+                alt="Kho CFS"
+                style="width: 100%; height: auto"
+              />
+            </div>
+            <div class="service-header">Customs Declaration</div>
+            <div class="service-detail">
+              WHEREHOUSE TECHNOLOGIES is proud to offer professional, quick, and
+              efficient customs declaration services, helping businesses easily
+              carry out import and export procedures smoothly. With a team of
+              experienced professionals who are knowledgeable about customs
+              regulations, we are committed to providing optimal solutions that
+              minimize risks and ensure accuracy in every process. Our customs
+              declaration services include:
+              <ul>
+                <li>
+                  Customs Consulting: We assist businesses in understanding
+                  regulations, policies, and selecting the appropriate HS codes.
+                </li>
+                <li>
+                  Preparation of Customs Documentation: We ensure all necessary
+                  paperwork is completed according to the requirements of the
+                  authorities.
+                </li>
+                <li>
+                  Customs Declaration and Clearance: We represent businesses in
+                  filing declarations and coordinating with customs authorities
+                  to expedite the clearance process.
+                </li>
+                <li>
+                  Issue Resolution: We assist in addressing any arising
+                  situations and provide advice on handling specific issues
+                  related to each type of cargo.
+                </li>
+              </ul>
+              With advanced technology and optimized processes, WHEREHOUSE
+              TECHNOLOGIES is ready to accompany businesses on their journey of
+              integration, market expansion, and sustainable business
+              development.
+            </div>
           </div>
-          <div class="col-md-4 col-xl-4 col-12">
-            <div
-              class="services-img"
-              style="background-image: url('../content/services3.jpg')"
-            ></div>
-            <div class="services-header">Trucking</div>
+          <div
+            class="tab-pane fade"
+            id="service3"
+            role="tabpanel"
+            aria-labelledby="service3-tab"
+          >
+            <div class="service-img">
+              <img
+                src="../content/services3.jpg"
+                alt="Kho CFS"
+                style="width: 100%; height: auto"
+              />
+            </div>
+            <div class="service-header">Vận tải Đường bộ</div>
+            <div class="service-detail">
+              WHEREHOUSE TECHNOLOGIES not only provides customs declaration
+              services but also offers comprehensive support with professional,
+              safe, and efficient road transportation services. We are committed
+              to delivering optimal cargo transportation solutions, helping
+              businesses save costs and time with an extensive transportation
+              network and a team of experienced drivers. Our road transportation
+              services include:
+              <ul>
+                <li>
+                  Domestic and International Transport: We ensure that goods are
+                  transported safely and on schedule from warehouses to delivery
+                  points both within the country and abroad.
+                </li>
+                <li>
+                  Diverse Transportation Vehicles: We utilize various types of
+                  vehicles, such as trucks, containers, and specialized
+                  vehicles, to meet the transportation needs of different types
+                  of cargo.
+                </li>
+                <li>
+                  Tracking and Journey Monitoring: We use GPS tracking
+                  technology, allowing customers to easily monitor and update
+                  the status of their shipments anytime and anywhere.
+                </li>
+                <li>
+                  Fast Procedure Support: We integrate customs declaration and
+                  transportation services, facilitating smooth movement of goods
+                  through customs checkpoints and ensuring quick delivery to
+                  customers.
+                </li>
+              </ul>
+              WHEREHOUSE TECHNOLOGIES is committed to partnering with businesses
+              to optimize the supply chain and enhance transportation
+              efficiency. Let us help you overcome every challenge in
+              transportation and customs declaration, ensuring complete
+              satisfaction with every shipment!
+            </div>
           </div>
         </div>
       </section>
-      <div class="section-underline"></div>
 
       <section
         id="contactus"
